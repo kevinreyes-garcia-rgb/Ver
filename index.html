@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="0; url=https://www.youtube.com">
+    <title>Ver YouTube</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+        .loader {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <h1>Redirigiendo a YouTube...</h1>
+        <p>Si no carga automáticamente, <a href="https://www.youtube.com">haz clic aquí</a>.</p>
+    </div>
+
+    <script>
+        // Refuerzo con JavaScript por si el meta tag falla
+        window.location.href = "https://www.youtube.com";
+    </script>
+</body>
+</html>
