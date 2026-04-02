@@ -7,28 +7,50 @@
     <title>Ver YouTube</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
-            background-color: #f9f9f9;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #0f0f0f;
         }
-        .loader {
+        .container {
             text-align: center;
+        }
+        .loading-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #ff0000;
+            border-radius: 50%;
+            animation: pulse 1s infinite ease-in-out;
+        }
+        @keyframes pulse {
+            0% { transform: scale(0.8); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 1; }
+            100% { transform: scale(0.8); opacity: 0.5; }
+        }
+        a {
+            color: #065fd4;
+            text-decoration: none;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <div class="loader">
-        <h1>Redirigiendo a YouTube...</h1>
-        <p>Si no carga automáticamente, <a href="https://www.youtube.com">haz clic aquí</a>.</p>
+
+    <div class="container">
+        <div class="loading-dot"></div>
+        <h1>Abriendo YouTube...</h1>
+        <p>Si la página no carga, <a href="https://www.youtube.com">haz clic aquí para entrar</a>.</p>
     </div>
 
     <script>
-        // Refuerzo con JavaScript por si el meta tag falla
-        window.location.href = "https://www.youtube.com";
+        // Redirección de respaldo mediante JavaScript
+        window.location.replace("https://www.youtube.com");
     </script>
 </body>
 </html>
